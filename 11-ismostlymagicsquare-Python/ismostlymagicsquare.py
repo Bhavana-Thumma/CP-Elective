@@ -13,6 +13,24 @@
 #   [ 2, 1]]
 # Each row and each column add to 3, but one diagonal adds to 2 and the other to 4.
 
-def ismostlymagicsquare(a):
-	# Your code goes here
-	pass
+def ismostlymagicsquare(arr):
+    leftdiag=0
+    rightdiag=0
+    n=len(arr)
+    for i in range(n):
+        leftdiag +=arr[i][i]
+        rightdiag+=arr[i][n-i-1]
+
+    if leftdiag != rightdiag:
+        return False
+
+    for i in range(n):
+        r=0
+        c=0
+        for j in range(n):
+            r+=arr[i][j]
+            c+=arr[j][i]
+
+        if r!= leftdiag and c!=leftdiag:
+            return False
+    return True
