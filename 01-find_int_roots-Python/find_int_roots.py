@@ -7,7 +7,9 @@
 # return root1, root2
 
 import math
-def fun_find_int_roots(a, b, c):
-	return 0, 0
 
+def fun_find_int_roots(a, b, c):
+    x1=(-b-math.sqrt(b**2-4*a*c))//2*a
+    y1=(-b+math.sqrt(b**2-4*a*c))//2*a
+    return x1,y1
 
