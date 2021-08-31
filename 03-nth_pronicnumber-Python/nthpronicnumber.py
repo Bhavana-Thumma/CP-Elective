@@ -3,6 +3,6 @@
 # Number. Pronic number is a number which is the product of two consecutive integers, that is, a 
 # number n is a product of x and (x+1).
 
+
 def nthpronicnumber(n):
-	# Your code goes here
-	pass
+    return n*(n+1)
