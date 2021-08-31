@@ -22,4 +22,8 @@
 
 def inverselookandsay(a):
 	# Your code goes here
-	pass
+    l=[]
+    for i in a:
+    	if(i!=tuple()):
+        	l=l+[i[1]]*i[0]
+    return l
